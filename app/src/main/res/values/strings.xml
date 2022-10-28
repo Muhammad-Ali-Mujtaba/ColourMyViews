@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ColourMyViews</string>
+    <string name="displayed_text">Hello World!</string>
+    <string name="string_box_one">Box One</string>
+    <string name="string_box_two">Box Two</string>
+    <string name="string_box_three">Box Three</string>
+    <string name="string_box_four">Box Four</string>
+    <string name="string_box_five">Box Five</string>
+    <string name="how_to_play">How To Play:</string>
+    <string name="info"><![CDATA["Tap the boxes & screen "]]></string>
+    <string name="red">Red</string>
+    <string name="green">Green</string>
+    <string name="blue">Blue</string>
+
+</resources>
