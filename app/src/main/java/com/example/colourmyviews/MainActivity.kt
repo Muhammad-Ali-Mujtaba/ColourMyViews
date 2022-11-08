@@ -20,59 +20,50 @@ class MainActivity : AppCompatActivity() {
         checkMyListeners()
     }
 
-    private fun checkMyListeners(){
+    private fun checkMyListeners() {
 
         binding.apply {
 
-            var boxesList = listOf<View>(textBoxOne,textBoxTwo,textBoxThree, textBoxFour, textBoxFive)
+            var boxesList =
+                listOf<View>(textBoxOne, textBoxTwo, textBoxThree, textBoxFour, textBoxFive)
 
-            var colourViewsList = listOf<View>(textBoxOne,textBoxTwo,textBoxThree,
-                textBoxFour, textBoxFive, layout, btnRed, btnGreen, btnBlue)
+            var colourViewsList = listOf<View>(
+                textBoxOne, textBoxTwo, textBoxThree,
+                textBoxFour, textBoxFive, layout, btnRed, btnGreen, btnBlue
+            )
 
-            for(item in colourViewsList){
-                item.setOnClickListener{ colouring(it, boxesList)}
+            for (item in colourViewsList) {
+                item.setOnClickListener { colouring(it, boxesList) }
             }
         }
-
     }
 
-    private fun colouring (chosenBox: View, elementsOnScreen: List<View>){
+    private fun colouring(chosenBox: View, elementsOnScreen: List<View>) {
         binding.apply {
             when (chosenBox) {
 
                 textBoxOne -> chosenBox.setBackgroundColor(Color.RED)
-
                 textBoxTwo -> chosenBox.setBackgroundColor(Color.BLUE)
-
                 textBoxThree -> chosenBox.setBackgroundColor(Color.GREEN)
-
                 textBoxFour -> chosenBox.setBackgroundColor(Color.YELLOW)
-
                 textBoxFive -> chosenBox.setBackgroundColor(Color.MAGENTA)
-
                 btnRed -> {
 
-                    for(element in elementsOnScreen){
+                    for (element in elementsOnScreen) {
                         element.setBackgroundColor(getColor(R.color.my_red))
                     }
                 }
-
                 btnGreen -> {
-
-                    for(element in elementsOnScreen){
+                    for (element in elementsOnScreen) {
                         element.setBackgroundColor(getColor(R.color.my_green))
                     }
                 }
-
                 btnBlue -> {
-
-                    for(element in elementsOnScreen){
+                    for (element in elementsOnScreen) {
                         element.setBackgroundColor(getColor(R.color.my_blue))
                     }
                 }
-
                 else -> chosenBox.setBackgroundColor(Color.LTGRAY)
-
             }
         }
 
